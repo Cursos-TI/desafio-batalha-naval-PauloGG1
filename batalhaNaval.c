@@ -36,6 +36,19 @@ printf("Posição inválida ou ocupada: (%d, %d)\n", x, y);
 }
 }
 
+// Posicionamento do navio vertical
+printf("\nCoordenadas do navio vertical:\n");
+for (int i = 0; i < TAM_NAVIO; i++) {
+int x = linhaNavioV + i;
+int y = colunaNavioV;
 
+// Verifica se está dentro dos limites e se a posição está livre
+if (x < TAM_TABULEIRO && tabuleiro[x][y] == 0) {
+    tabuleiro[x][y] = navioV[i];
+    printf("(%d, %d)\n", x, y);
+} else {
+    printf("Posição inválida ou ocupada: (%d, %d)\n", x, y);
+}
+}
 
 
