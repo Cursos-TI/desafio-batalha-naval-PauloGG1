@@ -27,5 +27,15 @@ for (int i = 0; i < TAM_NAVIO; i++) {
 int x = linhaNavioH;
 int y = colunaNavioH + i;
 
+// Verifica se está dentro dos limites e se esta livre a posição
+if (y < TAM_TABULEIRO && tabuleiro[x][y] == 0) {
+tabuleiro[x][y] = navioH[i];
+printf("(%d, %d)\n", x, y);
+} else {
+printf("Posição inválida ou ocupada: (%d, %d)\n", x, y);
+}
+}
+
+
 
 
