@@ -12,7 +12,6 @@ int main() {
 int tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO] = {0};
 
 // Vetores unidimensionais que representam os navios com valores 3
-
 int navioH[TAM_NAVIO] = {3, 3, 3}; // Navio da horizontal
 int navioV[TAM_NAVIO] = {3, 3, 3}; // Navio da vertical
 
@@ -42,7 +41,7 @@ for (int i = 0; i < TAM_NAVIO; i++) {
 int x = linhaNavioV + i;
 int y = colunaNavioV;
 
-// Verifica se está dentro dos limites e se a posição está livre
+// Verifica se está dentro dos limites e se esta livre a posição
 if (x < TAM_TABULEIRO && tabuleiro[x][y] == 0) {
     tabuleiro[x][y] = navioV[i];
     printf("(%d, %d)\n", x, y);
@@ -51,4 +50,14 @@ if (x < TAM_TABULEIRO && tabuleiro[x][y] == 0) {
 }
 }
 
+// Exibiçao do tabuleiro completo
+printf("\nTabuleiro final:\n");
+for (int i = 0; i < TAM_TABULEIRO; i++) {
+for (int j = 0; j < TAM_TABULEIRO; j++) {
+printf("%d ", tabuleiro[i][j]);
+}
+printf("\n");
+}
+return 0;
+}
 
